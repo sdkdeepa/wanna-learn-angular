@@ -1,0 +1,24 @@
+<main>
+  <header><img src="../assets/logo.svg" />Eatery</header>
+  <section>
+    <app-eatery-list
+      [locationList]="EateryLocationList"
+      (locationSelectedEvent)="updateSelectedLocation($event)"
+    >
+    </app-eatery-list>
+    <article>
+      <ng-container *ngIf="selectedLocation">
+        <img [src]="selectedLocation?.photo" />
+        <p>{{ selectedLocation?.name }}</p>
+        <p>{{ selectedLocation?.city }}, {{ selectedLocation?.state }}</p>
+        <p>Seating Units: {{ selectedLocation?.seatingUnits }}</p>
+        <p>
+          {{
+            selectedLocation?.takeout ? "Has takeout" : "Does Not have takeout"
+          }}
+        </p>
+        <p>{{ selectedLocation?.wifi ? "Has wifi" : "Does Not have wifi" }}</p>
+      </ng-container>
+    </article>
+  </section>
+</main>

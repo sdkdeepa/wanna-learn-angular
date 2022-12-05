@@ -1,0 +1,13 @@
+<label for="location-search">Search for a eatery near you</label>
+<input id="location-search" #search placeholder="Ex: San Jose" />
+<br />
+<button (click)="searchEateryLocations(search.value)">Search</button>
+<article
+  *ngFor="let location of results"
+  (click)="selectEateryLocation(location)"
+>
+  <img [src]="location.photo" [alt]="location.name" />
+  <p>{{ location.name }}</p>
+  <p>{{ location.city }}, {{ location.state }}</p>
+  <button (click)="selectEateryLocation(location)">View</button>
+</article>
