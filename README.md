@@ -4,7 +4,7 @@ In this codelab, you'll build a eatery app with Angular. This is the completed a
 
 You'll build everything with Angular using Angular's powerful tooling and great browser integration.
 
-![Codelabs link](https://sdkdeepa-angular-nation-codelab.netlify.app/)
+## [Codelab link](https://sdkdeepa-angular-nation-codelab.netlify.app/)
 
 Here's a preview of the application:
 
